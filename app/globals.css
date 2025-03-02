@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --terminal-black: #000000;
+  --terminal-red: #ff4d4d;
+  --terminal-orange: #ff6b4d;
+  --terminal-dim-red: rgba(255, 77, 77, 0.7);
+  --terminal-dim-orange: rgba(255, 107, 77, 0.7);
+  --terminal-glow-red: 0 0 10px rgba(255, 77, 77, 0.5);
+  --terminal-glow-orange: 0 0 10px rgba(255, 107, 77, 0.5);
+  --background: var(--terminal-black);
+  --foreground: var(--terminal-red);
+  --muted: rgba(255, 77, 77, 0.1);
+  --muted-foreground: rgba(255, 77, 77, 0.5);
+  --border: rgba(255, 77, 77, 0.2);
+  --radius: 0.5rem;
+}
+
+body {
+  background-color: var(--terminal-black);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--terminal-red);
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--terminal-red);
+}
+
+.gradient-text {
+  color: var(--terminal-red);
+  text-shadow: var(--terminal-glow-red);
+}
+
+/* Card styles */
+.card {
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid var(--terminal-dim-red);
+  border-radius: var(--radius);
+  box-shadow: var(--terminal-glow-red);
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--terminal-red);
+  box-shadow: 0 0 20px var(--terminal-red);
+}
+
+/* Button styles */
+.button-primary {
+  background: rgba(255, 77, 77, 0.1);
+  color: var(--terminal-red);
+  font-weight: 600;
+  border: 1px solid var(--terminal-dim-red);
+  border-radius: var(--radius);
+  padding: 0.75rem 1.5rem;
+  transition: all 0.2s ease;
+  text-shadow: var(--terminal-glow-red);
+}
+
+.button-primary:hover {
+  background: rgba(255, 77, 77, 0.2);
+  border-color: var(--terminal-red);
+  box-shadow: var(--terminal-glow-red);
+  transform: translateY(-1px);
+}
+
+.button-secondary {
+  background: rgba(0, 0, 0, 0.8);
+  color: var(--terminal-red);
+  font-weight: 600;
+  border: 1px solid var(--terminal-dim-red);
+  border-radius: var(--radius);
+  padding: 0.75rem 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.button-secondary:hover {
+  background: rgba(255, 77, 77, 0.1);
+  border-color: var(--terminal-red);
+  box-shadow: var(--terminal-glow-red);
+}
+
+/* Analysis page specific styles */
+.analysis-card {
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid var(--terminal-dim-red);
+  border-radius: var(--radius);
+  transition: all 0.2s ease;
+}
+
+.analysis-header {
+  border-bottom: 1px solid var(--terminal-dim-red);
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.terminal-glow {
+  text-shadow: var(--terminal-glow-red);
+}
+
+.terminal-box-glow {
+  box-shadow: var(--terminal-glow-red);
+}
+
+/* Terminal elements */
+.terminal-text {
+  color: var(--terminal-red);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.terminal-bg {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Navigation */
+.nav-link {
+  color: var(--terminal-red);
+  opacity: 0.7;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  opacity: 1;
+  text-shadow: var(--terminal-glow-red);
+}
+
+/* Input styles */
+input,
+textarea {
+  background: rgba(0, 0, 0, 0.8) !important;
+  border: 1px solid var(--terminal-dim-red) !important;
+  color: var(--terminal-red) !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--terminal-red) !important;
+  box-shadow: var(--terminal-glow-red) !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--terminal-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--terminal-dim-red);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--terminal-red);
+}
+
+/* Dialog/Modal styles */
+.dialog-content {
+  background: rgba(0, 0, 0, 0.95) !important;
+  border: 1px solid var(--terminal-dim-red) !important;
+  box-shadow: var(--terminal-glow-red) !important;
+}
+
+/* Terminal specific text colors */
+.text-terminal {
+  color: var(--terminal-red);
+}
+
+.text-terminal-dim {
+  color: var(--terminal-dim-red);
+}
+
+.text-terminal-red {
+  color: var(--terminal-red);
+}
+
+.text-terminal-orange {
+  color: var(--terminal-orange);
+}
+
+.text-terminal-dim-red {
+  color: var(--terminal-dim-red);
+}
+
+.text-terminal-dim-orange {
+  color: var(--terminal-dim-orange);
+}
+
+.glow-red {
+  text-shadow: var(--terminal-glow-red);
+}
+
+.glow-orange {
+  text-shadow: var(--terminal-glow-orange);
+}
+
